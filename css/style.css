@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+    --tausta: #f0f0f0;
+    --tausta-linkit: #248845;
+    --teksti: #333333;
+    --teksti-vaalea: #eeeeee;
+    --reunat-linkit: #1e723a;
+    --reunat-taulukko: #aaaaaa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--tausta);
+    color: var(--teksti);
+}
+
+main {
+    max-width: 1200px;
+    width: 70%;
+    margin: 70px auto;
+}
+
+nav {
+    top: 0;
+    width: 100%;
+    padding-left: 10px;
+    display: flex;
+    background-color: var(--tausta-linkit);
+    position: fixed;
+}
+
+nav a {
+    padding: 10px 20px;
+    color: var(--teksti-vaalea);
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: var(--tausta);
+    color: var(--teksti);
+}
+
+ul {
+    line-height: 1.4em;
+    padding: 0 1.2em;
+}
+
+/* table */
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+table, td {
+    border: solid var(--reunat-taulukko) 1px;
+}
+
+th {
+    font-size: 1.2em;
+    color: var(--teksti-vaalea);
+    background-color: var(--tausta-linkit);
+}
+
+th, td {
+    padding: 5px 8px;
+}
+
+
+/* Mobiilityylit */
+
+@media only screen and (max-width: 700px) {
+    nav {
+        padding-left: 0;
+        flex-direction: column;
+        position: relative;
+    }
+
+    nav a {
+        text-align: center;
+        border-bottom: solid var(--reunat-linkit) 2px;
+    }
+
+    nav a:hover {
+        border-bottom-color: var(--tausta);
+    }
+
+    main {
+        width: 90%;
+        margin-top: 30px;
+    }
+}
